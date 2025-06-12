@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuoDuo Two Heroes - Epic Co-op Adventure Game | Play Free Online</title>
-    <meta name="description" content="Play DuoDuo Two Heroes, an exciting online co-op adventure game. Team up with a friend or play solo in this thrilling platformer featuring two brave heroes on an epic quest.">
-    <meta name="keywords" content="duoduotwoheroes, duo duo two heroes, online game, co-op game, adventure game, platformer, free game">
+    <title>Merge Academy - Ultimate Merging Strategy Game | Play Free Online</title>
+    <meta name="description" content="Play Merge Academy, the ultimate merging strategy game online. Combine items, build your academy, and master the art of strategic merging in this addictive free game.">
+    <meta name="keywords" content="merge academy, merge game, strategy game, online game, free game, merging game, puzzle game, academy game">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://duoduotwoheroes.com/">
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="DuoDuo Two Heroes - Epic Co-op Adventure Game">
-    <meta property="og:description" content="Play DuoDuo Two Heroes online for free. An exciting co-op adventure platformer game.">
+    <meta property="og:title" content="Merge Academy - Ultimate Merging Strategy Game">
+    <meta property="og:description" content="Play Merge Academy online for free. The ultimate merging strategy game with endless possibilities.">
     <meta property="og:url" content="https://duoduotwoheroes.com/">
     <meta property="og:type" content="website">
     
@@ -20,12 +20,12 @@
     {
         "@context": "https://schema.org",
         "@type": "VideoGame",
-        "name": "DuoDuo Two Heroes",
-        "description": "An exciting online co-op adventure game featuring two brave heroes on an epic quest",
+        "name": "Merge Academy",
+        "description": "Ultimate merging strategy game where players combine items to build and upgrade their academy while mastering strategic gameplay",
         "url": "https://duoduotwoheroes.com/",
-        "genre": ["Adventure", "Platformer", "Co-op"],
+        "genre": ["Strategy", "Puzzle", "Merge", "Simulation"],
         "gamePlatform": "Web Browser",
-        "playMode": ["SinglePlayer", "CoOp"]
+        "playMode": "SinglePlayer"
     }
     </script>
 
@@ -37,6 +37,8 @@
             --success-green: #34C759;
             --warning-orange: #FF9500;
             --error-red: #FF3B30;
+            --purple: #AF52DE;
+            --teal: #5AC8FA;
             --gray-1: #8E8E93;
             --gray-2: #AEAEB2;
             --gray-3: #C7C7CC;
@@ -69,172 +71,359 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            background: linear-gradient(135deg, var(--primary-blue), var(--teal), var(--success-green));
             color: white;
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 80%, rgba(255,255,255,0.15) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, #FFFFFF, #F0F0F0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -2px;
         }
 
         .tagline {
-            font-size: 1.4rem;
-            font-weight: 300;
-            opacity: 0.9;
-            max-width: 600px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+            max-width: 700px;
             margin: 0 auto;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         /* Game Section */
         .game-section {
-            padding: 40px 0;
-            background-color: var(--gray-6);
+            padding: 50px 0;
+            background: linear-gradient(135deg, var(--gray-6), #FFFFFF);
         }
 
         .game-container {
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            border: 1px solid var(--gray-5);
+        }
+
+        .game-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--teal), var(--success-green), var(--warning-orange));
         }
 
         .game-iframe {
             width: 100%;
-            height: 600px;
+            height: 650px;
             border: none;
+            display: block;
         }
 
         /* Content Sections */
         .content-section {
-            padding: 60px 0;
+            padding: 70px 0;
         }
 
         .content-section:nth-child(even) {
-            background-color: var(--gray-6);
+            background: linear-gradient(135deg, var(--gray-6), rgba(248, 248, 248, 0.8));
         }
 
         h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 30px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 35px;
             color: var(--text-primary);
+            position: relative;
+            letter-spacing: -1px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--teal));
+            border-radius: 3px;
         }
 
         .section-content {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             line-height: 1.8;
             color: var(--text-secondary);
-            max-width: 800px;
+            max-width: 850px;
+        }
+
+        .section-content p {
+            margin-bottom: 25px;
         }
 
         /* Features Grid */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 35px;
+            margin-top: 60px;
         }
 
         .feature-card {
             background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--gray-5);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--teal));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-            border-radius: 12px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--teal));
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 32px;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0, 122, 255, 0.3);
         }
 
         .feature-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 18px;
             color: var(--text-primary);
         }
 
         .feature-description {
             color: var(--text-secondary);
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        /* Academy Features */
+        .academy-features {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid var(--gray-5);
+        }
+
+        .academy-features h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--primary-blue);
+        }
+
+        .academy-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .academy-features li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--gray-5);
+            position: relative;
+            padding-left: 50px;
+            font-size: 1.1rem;
+        }
+
+        .academy-features li:last-child {
+            border-bottom: none;
+        }
+
+        .academy-features li::before {
+            content: '🎓';
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--success-green), var(--teal));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        /* Progress Bar Animation */
+        .progress-demo {
+            background: var(--gray-6);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 12px;
+            background: var(--gray-5);
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success-green), var(--teal));
+            border-radius: 6px;
+            width: 0%;
+            animation: fillProgress 3s ease-in-out infinite;
+        }
+
+        @keyframes fillProgress {
+            0% { width: 0%; }
+            50% { width: 85%; }
+            100% { width: 0%; }
         }
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--success-green), var(--primary-blue));
+            background: linear-gradient(135deg, var(--success-green), var(--primary-blue), var(--purple));
             color: white;
-            padding: 80px 0;
+            padding: 90px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 20%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 30% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
         }
 
         .cta-button {
             display: inline-block;
             background: white;
             color: var(--primary-blue);
-            padding: 16px 32px;
+            padding: 20px 45px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-top: 35px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            background: var(--gray-6);
+            border-color: white;
         }
 
         /* Footer */
         footer {
             background-color: var(--text-primary);
             color: white;
-            padding: 40px 0;
+            padding: 50px 0;
             text-align: center;
+        }
+
+        .footer-content {
+            font-size: 1.1rem;
+            opacity: 0.8;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
+                letter-spacing: -1px;
             }
 
             .tagline {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .game-iframe {
-                height: 400px;
+                height: 500px;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 25px;
+            }
+
+            .feature-card {
+                padding: 30px;
             }
 
             .container {
@@ -242,30 +431,70 @@
             }
 
             .content-section {
-                padding: 40px 0;
+                padding: 50px 0;
+            }
+
+            header {
+                padding: 50px 0;
+            }
+
+            .feature-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .tagline {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             h2 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
 
             .game-iframe {
-                height: 300px;
+                height: 400px;
             }
 
-            header {
-                padding: 40px 0;
+            .feature-card {
+                padding: 25px;
             }
+
+            .cta-button {
+                padding: 18px 35px;
+                font-size: 1.2rem;
+            }
+
+            .section-content {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Loading and entrance animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .loading {
+            opacity: 0.7;
+            transition: opacity 0.4s ease;
+        }
+
+        .loaded {
+            opacity: 1;
         }
     </style>
 </head>
@@ -273,8 +502,10 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <h1>DuoDuo Two Heroes</h1>
-            <p class="tagline">Embark on an epic co-op adventure with two brave heroes in this thrilling online platformer game</p>
+            <div class="header-content">
+                <h1>Merge Academy</h1>
+                <p class="tagline">Master the ultimate merging strategy game where every combination unlocks endless possibilities and builds your dream academy</p>
+            </div>
         </div>
     </header>
 
@@ -282,7 +513,7 @@
     <section class="game-section">
         <div class="container">
             <div class="game-container">
-                <iframe src="https://www.crazygames.com/embed/duo-kjn" class="game-iframe" allow="gamepad *;"></iframe>
+                <iframe src="https://www.crazygames.com/embed/merge-academy" class="game-iframe loading" allow="gamepad *;"></iframe>
             </div>
         </div>
     </section>
@@ -290,11 +521,13 @@
     <!-- About Section -->
     <section class="content-section">
         <div class="container">
-            <h2>About DuoDuo Two Heroes</h2>
+            <h2>About Merge Academy</h2>
             <div class="section-content">
-                <p>DuoDuo Two Heroes is an exciting online adventure platformer that brings together the classic elements of cooperative gameplay with modern game design. This captivating browser-based game features two unique heroes who must work together to overcome challenging obstacles, solve puzzles, and defeat enemies in their quest to save their magical kingdom.</p>
+                <p>Merge Academy is the ultimate strategic merging game that combines addictive gameplay mechanics with deep educational simulation elements. In this captivating browser-based experience, players take on the role of an academy administrator, strategically merging various items, buildings, and resources to create the most prestigious educational institution possible.</p>
                 
-                <p>Whether you're playing solo by controlling both characters or teaming up with a friend for true cooperative gameplay, DuoDuo Two Heroes offers an engaging experience that combines skill, strategy, and teamwork. The game features beautifully crafted levels, smooth controls, and progressively challenging gameplay that keeps players coming back for more.</p>
+                <p>The game's innovative merging system allows players to combine identical items to create upgraded versions with enhanced capabilities and increased value. From simple classroom supplies to advanced research facilities, every merge decision shapes the growth and success of your academy. The strategic depth comes from understanding which combinations yield the most beneficial results for your institution's development.</p>
+
+                <p>What sets Merge Academy apart is its perfect balance of instant gratification and long-term strategic planning. Each successful merge provides immediate satisfaction while contributing to larger goals of academy expansion, student satisfaction, and educational excellence. The game's progression system rewards both quick thinking and careful resource management.</p>
             </div>
         </div>
     </section>
@@ -304,41 +537,77 @@
         <div class="container">
             <h2>Game Features</h2>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3 class="feature-title">Cooperative Gameplay</h3>
-                    <p class="feature-description">Play with a friend locally or control both heroes yourself in this unique dual-character platformer experience.</p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎓</div>
+                    <h3 class="feature-title">Academy Building</h3>
+                    <p class="feature-description">Construct and upgrade your dream academy by merging buildings, facilities, and educational resources to create the ultimate learning environment.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">🏰</div>
-                    <h3 class="feature-title">Epic Adventure</h3>
-                    <p class="feature-description">Explore diverse levels filled with challenging obstacles, hidden secrets, and epic boss battles.</p>
-                </div>
-                
-                <div class="feature-card">
+                <div class="feature-card fade-in">
                     <div class="feature-icon">🧩</div>
-                    <h3 class="feature-title">Puzzle Elements</h3>
-                    <p class="feature-description">Solve creative puzzles that require coordination between both heroes to unlock new areas and progress.</p>
+                    <h3 class="feature-title">Strategic Merging</h3>
+                    <p class="feature-description">Master the art of strategic combinations with hundreds of unique items that can be merged to unlock powerful upgrades and new possibilities.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Unique Abilities</h3>
-                    <p class="feature-description">Each hero possesses special abilities that complement each other, creating strategic gameplay opportunities.</p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Progressive Learning</h3>
+                    <p class="feature-description">Unlock new merge categories and advanced items as you progress, keeping the gameplay fresh and continuously challenging.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">Achievement System</h3>
+                    <p class="feature-description">Earn prestigious awards and unlock special bonuses by completing challenging merge objectives and academy milestones.</p>
+                </div>
+            </div>
+
+            <div class="academy-features">
+                <h3>Academy Management Features</h3>
+                <ul>
+                    <li>Merge classrooms to create specialized learning environments</li>
+                    <li>Combine teaching materials to develop advanced curriculum</li>
+                    <li>Build research facilities through strategic item combinations</li>
+                    <li>Create student amenities by merging recreational items</li>
+                    <li>Develop campus infrastructure through building merges</li>
+                    <li>Unlock prestigious academy rankings through optimal management</li>
+                </ul>
+                
+                <div class="progress-demo">
+                    <h4 style="margin-bottom: 15px; color: var(--primary-blue);">Academy Progress</h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Watch your academy grow with every strategic merge!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How to Play Section -->
+    <!-- Gameplay Guide Section -->
     <section class="content-section">
         <div class="container">
-            <h2>How to Play DuoDuo Two Heroes</h2>
+            <h2>How to Play Merge Academy</h2>
             <div class="section-content">
-                <p>Getting started with DuoDuo Two Heroes is simple and intuitive. The game can be played entirely in your web browser without any downloads or installations required. Use the arrow keys or WASD to control the first hero, while the second hero can be controlled with different key combinations for cooperative play.</p>
+                <p>Starting your journey in Merge Academy is intuitive and engaging. The game begins with a simple tutorial that introduces the basic merging mechanics and academy management concepts. Players start with basic items and empty spaces on their academy grid, ready to begin the exciting process of building their educational empire.</p>
                 
-                <p>The objective is to guide both heroes through each level, working together to overcome obstacles, collect items, and reach the exit portal. Some challenges require precise timing and coordination between both characters, making communication essential when playing with a friend. Master the unique abilities of each hero and discover how their skills complement each other to tackle increasingly complex levels.</p>
+                <p>The core gameplay revolves around dragging and dropping identical items onto each other to create upgraded versions. As you merge items, you'll discover new categories of objects, from basic school supplies to advanced scientific equipment. Each merge not only improves individual items but also contributes to your academy's overall development and reputation.</p>
+
+                <p>Success in Merge Academy requires balancing immediate needs with long-term planning. While it's tempting to merge items as soon as possible, experienced players learn to save space strategically and plan merge sequences that maximize their academy's growth potential. The game rewards patience and strategic thinking with rare items and powerful combinations that dramatically accelerate progress.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Tips Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Master Your Merging Strategy</h2>
+            <div class="section-content">
+                <p>Becoming a Merge Academy expert requires understanding the intricate relationships between different item categories and their optimal combination sequences. Advanced players develop sophisticated strategies that maximize space efficiency while ensuring steady progress toward their academy's goals.</p>
+                
+                <p>One key strategy involves understanding the merge chain hierarchy - knowing which items can be combined and what their upgraded versions become. This knowledge allows players to plan several moves ahead, ensuring they always have space for new items while working toward valuable high-tier merges that provide significant academy benefits.</p>
+
+                <p>Resource management extends beyond simple merging to include spatial awareness and timing. The most successful players learn to maintain a balance between different item types, ensuring their academy develops harmoniously across all areas - from academic excellence to student satisfaction and facility quality.</p>
             </div>
         </div>
     </section>
@@ -346,11 +615,13 @@
     <!-- Why Play Section -->
     <section class="content-section">
         <div class="container">
-            <h2>Why Play DuoDuo Two Heroes?</h2>
+            <h2>Why Choose Merge Academy?</h2>
             <div class="section-content">
-                <p>DuoDuo Two Heroes stands out in the crowded world of online games by offering a perfect blend of accessibility and depth. The game is completely free to play and runs smoothly on any modern web browser, making it accessible to players on desktop computers, laptops, tablets, and mobile devices.</p>
+                <p>Merge Academy stands out in the competitive world of online strategy games by offering a unique blend of addictive merging mechanics and meaningful progression systems. Unlike simple match-three games, Merge Academy provides deep strategic gameplay that rewards both quick decision-making and long-term planning skills.</p>
                 
-                <p>The cooperative gameplay mechanics encourage teamwork and communication, making it an excellent choice for friends, family members, or couples looking for a fun gaming experience to share together. The progressive difficulty curve ensures that both newcomers and experienced gamers will find appropriate challenges, while the charming art style and engaging soundtrack create an immersive gaming environment that appeals to players of all ages.</p>
+                <p>The game's accessibility is one of its greatest strengths. Running smoothly on any modern web browser, Merge Academy requires no downloads, installations, or special software. This makes it perfect for players who want to enjoy strategic gaming during breaks, commutes, or whenever they have a few minutes to spare.</p>
+
+                <p>The educational theme adds a layer of purpose to the gameplay that many players find deeply satisfying. Building and managing an academy feels meaningful and rewarding, especially as players see their strategic decisions translate into a thriving educational institution. Regular content updates ensure that the experience remains fresh and challenging for dedicated players.</p>
             </div>
         </div>
     </section>
@@ -358,16 +629,20 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready for Adventure?</h2>
-            <p>Join thousands of players who have already discovered the magic of DuoDuo Two Heroes. Start your epic journey today!</p>
-            <a href="#game" class="cta-button">Play Now - It's Free!</a>
+            <div class="cta-content">
+                <h2>Start Building Your Dream Academy Today!</h2>
+                <p>Join thousands of strategic thinkers who have discovered the addictive world of Merge Academy. Your perfect educational institution awaits!</p>
+                <a href="#game" class="cta-button">Play Merge Academy Now - Free!</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 DuoDuo Two Heroes. All rights reserved. | Play responsibly and have fun!</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Merge Academy. All rights reserved. | Strategic education gaming at its finest!</p>
+            </div>
         </div>
     </footer>
 
@@ -383,8 +658,48 @@
         // Add loading animation for iframe
         const iframe = document.querySelector('.game-iframe');
         iframe.addEventListener('load', function() {
-            this.style.opacity = '1';
+            this.classList.remove('loading');
+            this.classList.add('loaded');
         });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe fade-in elements
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Add staggered animation delay for feature cards
+        document.querySelectorAll('.feature-card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // Progress bar animation restart on scroll
+        const progressBar = document.querySelector('.progress-fill');
+        const progressObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    progressBar.style.animation = 'none';
+                    setTimeout(() => {
+                        progressBar.style.animation = 'fillProgress 3s ease-in-out infinite';
+                    }, 100);
+                }
+            });
+        });
+
+        progressObserver.observe(document.querySelector('.progress-demo'));
     </script>
 </body>
 </html>
